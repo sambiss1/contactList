@@ -3,22 +3,28 @@
   padding: 0;
   box-sizing: border-box;
 }
-html, body {
+
+html,
+body {
   height: 100%;
   width: 100%;
 }
+
 /* Main container */
 .container {
   display: grid;
   grid-template-rows: 100px auto;
 }
+
 /* Main content */
 .main__content {
   display: flex;
   background: #F7F7F7;
 }
+
 /* Left and right section */
-.left, .right {
+.left,
+.right {
   margin: 1%;
   display: flex;
   flex-direction: column;
@@ -29,27 +35,38 @@ html, body {
 .form__container {
   width: 45%;
 }
+
 /* Form content */
-.form__container >.title__container {
+.form__container>.title__container {
   margin: 0 0 5%;
 }
+
 form {
   width: 100%;
   padding: 2%;
 }
+
 form>div {
   margin: 1em 0;
 }
+
 /* Label */
 label {
   color: #2D7FEB;
 }
+
 /* Input(type text), select input, textearea*/
-input[type="text"], 
+input[type="text"],
 select,
 textarea {
   width: 100%;
 }
+
+#bioField {
+  height: 150px;
+  resize: none;
+}
+
 /* Text Input, and select input */
 input[type="text"],
 select {
@@ -57,11 +74,13 @@ select {
   background: #ffffff;
   border: none;
 }
+
 /* Upload container */
 .uploaded__container {
   display: flex;
   justify-content: space-between;
 }
+
 /* Upload file button */
 .upload__file {
   background: #C4C4C4;
@@ -69,16 +88,26 @@ select {
   height: 40px;
   width: 40%;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
+
+input[type="file"] {
+  display: none;
+}
+
 .contact__image__container {
- width:  35%;
+  width: 35%;
   border: none;
 }
+
 #uploadedImage {
   width: 100%;
   height: 100%;
 }
- 
+
 /* Submit and reset button */
 #submitButton,
 #resetButton {
@@ -90,14 +119,17 @@ select {
   border: none;
   border-radius: 2px;
 }
+
 #submitButton:hover,
 #resetButton:hover {
   cursor: pointer;
 }
+
 /* Submit button */
 #submitButton {
   background: #2D7FEB;
 }
+
 #resetButton {
   background: #EB5656;
 }
@@ -111,6 +143,7 @@ select {
   text-align: center;
   padding: 2em 1em;
 }
+
 .header__title {
   text-align: left;
 }
@@ -119,33 +152,41 @@ select {
 .contact__list__container {
   width: 55%;
 }
+
 /* Contact details */
 .contactDetails {
   display: flex;
   flex-direction: row;
   width: 100%;
-  
+  cursor: pointer;
   border: .1em solid #2D7FEB;
+  padding: 5%;
 }
+
 .contactDetailsImageContainer {
-  width: 150px;
-  height: 150px;
-  margin: 5%;
+  width: 20%;
+  height: 100%;
+  margin: 0 5%;
 }
-.aboutContact{
+
+.aboutContact {
   color: #999999;
   padding: 2%;
+  width: 50%;
 }
+
 .la-times {
   color: #EB5656;
   position: absolute;
   right: 2%;
   font-size: 2em;
 }
+
 .la-times:hover {
   cursor: pointer;
 }
-.contactDetailsImageContainer >.contactImageDetails {
+
+.contactDetailsImageContainer>.contactImageDetails {
   width: 100%;
   height: 100%;
   border-radius: 50%;
