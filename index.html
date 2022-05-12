@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Contact List | Register </title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+
+<body>
+  <!--Main container -->
+  <div class="container" id="container">
+    <!-- Header -->
+    <header class="title__container header__title">
+      <!-- Application Name -->
+      <h1 class="title">Répertoire de Contact</h1>
+    </header>
+    <!-- Main content -->
+    <main class="main__content" id="main__content">
+      <!-- Form container -->
+      <section class="form__container left">
+        <div class="title__container">
+          <h2 class="title">Formulaire de contact</h2>
+        </div>
+        <!-- Form content -->
+        <form>
+          <!-- Prénom -->
+          <div>
+            <label>Prénom</label>
+            <br><input type="text" name="prenom" id="firstNameField" required>
+          </div>
+          <!-- Nom -->
+          <div>
+            <label>Nom</label>
+            <br><input type="text" name="nom" id="lastNameField">
+          </div>
+          <!-- Groupe-->
+          <div>
+            <label>Groupe</label>
+            <br>
+            <select id="selectGroup">
+              <option selected></option>
+              <option>Friend</option>
+              <option>Family</option>
+              <option>Work</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <!-- Bio -->
+          <div>
+            <label>Bio</label>
+            <br>
+            <textarea id="bioField"rows="10" ></textarea></div>
+          <div class="uploaded__container"><input type="file" id="upload__file" name="upload__file"class="upload__file"  accept=".jpg, .jpeg, .png, .webp">
+          <div class="contact__image__container"><img id="uploadedImage">
+          </div>
+          </div>
+          <!-- Submit and Reset button -->
+            <div>
+              <input type="submit" id="submitButton" value="Créer">
+              <input type="reset" id="resetButton" value="Réinitialiser">
+            </div>
+        </form>
+      </section>
+      <!-- Contact list container -->
+      <section class="contact__list__container right">
+        <div class="title__container">
+          <h2 class="title">Liste de contact</h2>
+      </section>
+      
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

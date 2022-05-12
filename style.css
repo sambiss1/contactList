@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+}
+/* Main container */
+.container {
+  display: grid;
+  grid-template-rows: 100px auto;
+}
+/* Main content */
+.main__content {
+  display: flex;
+  background: #F7F7F7;
+}
+/* Left and right section */
+.left, .right {
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  border: .1em solid #2D7FEB;
+}
+
+/* Form container */
+.form__container {
+  width: 45%;
+}
+/* Form content */
+.form__container >.title__container {
+  margin: 0 0 5%;
+}
+form {
+  width: 100%;
+  padding: 2%;
+}
+form>div {
+  margin: 1em 0;
+}
+/* Label */
+label {
+  color: #2D7FEB;
+}
+/* Input(type text), select input, textearea*/
+input[type="text"], 
+select,
+textarea {
+  width: 100%;
+}
+/* Text Input, and select input */
+input[type="text"],
+select {
+  height: 40px;
+  background: #ffffff;
+  border: none;
+}
+/* Upload container */
+.uploaded__container {
+  display: flex;
+  justify-content: space-between;
+}
+/* Upload file button */
+.upload__file {
+  background: #C4C4C4;
+  color: #000000;
+  height: 40px;
+  width: 40%;
+  border: none;
+}
+.contact__image__container {
+ width:  35%;
+  border: none;
+}
+#uploadedImage {
+  width: 100%;
+  height: 100%;
+}
+ 
+/* Submit and reset button */
+#submitButton,
+#resetButton {
+  width: 40%;
+  height: 60px;
+  margin: 5% 3%;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  border-radius: 2px;
+}
+#submitButton:hover,
+#resetButton:hover {
+  cursor: pointer;
+}
+/* Submit button */
+#submitButton {
+  background: #2D7FEB;
+}
+#resetButton {
+  background: #EB5656;
+}
+
+
+
+/* Every title container */
+.title__container {
+  background: #2D7FEB;
+  color: #ffffff;
+  text-align: center;
+  padding: 2em 1em;
+}
+.header__title {
+  text-align: left;
+}
+
+/* Contact list container */
+.contact__list__container {
+  width: 55%;
+}
+/* Contact details */
+.contactDetails {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  
+  border: .1em solid #2D7FEB;
+}
+.contactDetailsImageContainer {
+  width: 150px;
+  height: 150px;
+  margin: 5%;
+}
+.aboutContact{
+  color: #999999;
+  padding: 2%;
+}
+.la-times {
+  color: #EB5656;
+  position: absolute;
+  right: 2%;
+  font-size: 2em;
+}
+.la-times:hover {
+  cursor: pointer;
+}
+.contactDetailsImageContainer >.contactImageDetails {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
