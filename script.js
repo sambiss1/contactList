@@ -66,16 +66,7 @@ form.addEventListener("submit", submitInformation = (event) => {
   /* Show image */
   contactDetailsImage.src = uploadedImage.src;
   console.log(contactDetailsImage.src);
-  // if (uploadedImage.src === "") {
-  //   let errorMessageImage = document.createElement("p");
-  //   errorMessageImage.classList.add("errorMessage");
-  //   errorMessageImage.textContent = "Please upload an image";
-  //   errorMessageImage.style = "color: red";
-  //   uploadedImageContainer.style.display = "block";
-  //   uploadedImageContainer.appendChild(errorMessageImage);
-  // } else {
-  //   contactDetailsImage.src = uploadedImage.src;
-  // }
+
   /* Show first name*/
   firstName.textContent = firstNameField.value;
   // Show last name
@@ -86,7 +77,6 @@ form.addEventListener("submit", submitInformation = (event) => {
   }
   // Show bio
   bioText.textContent = bioField.value;
-
 
   console.log(isModified);
   const contactDetailsId = Math.random().toString().substring(2, 17);
@@ -122,8 +112,6 @@ form.addEventListener("submit", submitInformation = (event) => {
           console.log(lastName.textContent);
           console.log(contactDetailsImage.src);
           console.log(uploadedImage.src);
-
-          event.preventDefault();
           if (isModified) {
             firstName.textContent = firstNameField.value;
             lastName.textContent = " " + lastNameField.value;
@@ -144,15 +132,13 @@ form.addEventListener("submit", submitInformation = (event) => {
             console.log(isModified);
             form.reset();
           }
-
-        })
+        });
       }
-
     }
   });
 
   /* Create contact list */
-  if (isModified === false) {
+  if (submitButton.value === "Créer") {
     contactListContainer.appendChild(contactDetails);
     contactDetails.appendChild(contactDetailsImageContainer)
     contactDetails.appendChild(aboutContact)
@@ -164,7 +150,7 @@ form.addEventListener("submit", submitInformation = (event) => {
     aboutContact.appendChild(bioText)
     contactDetailsImageContainer.appendChild(contactDetailsImage);
   }
-
+  // form.reset();
   // Change contact Details on form
   // Generate unique id for contact details
 
