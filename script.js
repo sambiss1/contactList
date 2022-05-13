@@ -65,7 +65,6 @@ form.addEventListener("submit", submitInformation = (event) => {
   /* Show Contact Information */
   /* Show image */
   contactDetailsImage.src = uploadedImage.src;
-  console.log(contactDetailsImage.src);
 
   /* Show first name*/
   firstName.textContent = firstNameField.value;
@@ -80,39 +79,37 @@ form.addEventListener("submit", submitInformation = (event) => {
 
   console.log(isModified);
   const contactDetailsId = Math.random().toString().substring(2, 17);
-  var contactID = contactDetails.setAttribute("id", contactDetailsId);
+  let contactID = contactDetails.setAttribute("id", contactDetailsId);
   // Update contact list
   contactDetails.addEventListener("click", clickOnContactDetails = (event) => {
     isModified = true;
     console.log(isModified);
 
     if (event.target.classList.contains("contactDetails")) {
-      console.log(event.target.id);
-      console.log(contactDetailsId);
+      const idContact = event.target.id;
+      console.log(idContact);
       if (event.target.id === contactDetailsId) {
         submitButton.value = "Modifier";
         firstNameField.value = firstName.textContent;
-        console.log(firstNameField.value);
         lastNameField.value = lastName.textContent;
-        console.log(lastNameField.value);
         for (let i = 0; i < selectGroup.length; i++) {
           selectGroup[i].text = selectedOption.textContent;
         }
         bioField.value = bioText.textContent;
         uploadedImage.src = contactDetailsImage.src;
-        console.log(uploadedImage.src);
         uploadedImageContainer.style.display = "block";
         uploadedImage.style.display = "block";
 
         // Update contact details 
         submitButton.addEventListener("click", updateContactDetails = (event) => {
-          console.log(firstNameField.value);
-          console.log(lastNameField.value);
-          console.log(firstName.textContent);
-          console.log(lastName.textContent);
-          console.log(contactDetailsImage.src);
-          console.log(uploadedImage.src);
-          if (isModified) {
+          // Check if the contact details as the same as the previous one
+          // if (firstNameField.value === firstName.textContent && lastNameField.value === lastName.textContent && bioField.value === bioText.textContent) {
+          //   return;
+          // }
+          // Update contact details
+          console.log(idContact);
+          if (idContact === contactDetailsId) {
+
             firstName.textContent = firstNameField.value;
             lastName.textContent = " " + lastNameField.value;
             for (let i = 0; i < selectGroup.length; i++) {
@@ -120,17 +117,12 @@ form.addEventListener("submit", submitInformation = (event) => {
             }
             bioText.textContent = bioField.value;
             contactDetailsImage.src = uploadedImage.src;
-            console.log(firstNameField.value);
-            console.log(lastNameField.value);
-            console.log(firstName.textContent);
-            console.log(lastName.textContent);
-
-            console.log(contactDetailsImage.src);
-            console.log(uploadedImage.src);
             submitButton.value = "Créer";
             isModified = false;
             console.log(isModified);
             form.reset();
+          } else {
+            return;
           }
         });
       }
