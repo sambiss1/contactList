@@ -30,7 +30,7 @@
           <!-- Prénom -->
           <div>
             <label>Prénom <span>*</span></label>
-            <br><input type="text" name="prenom" id="firstNameField" required>
+            <br><input type="text" name="prenom" id="firstNameField">
           </div>
           <!-- Nom -->
           <div>
@@ -43,10 +43,10 @@
             <br>
             <select id="selectGroup">
               <option selected></option>
-              <option>Friend</option>
-              <option>Family</option>
-              <option>Work</option>
-              <option>Other</option>
+              <option value="Friend">Friend</option>
+              <option value="Family">Family</option>
+              <option value="Work">Work</option>
+              <option value="Other">Other</option>
             </select>
           </div>
           <!-- Bio -->
@@ -56,16 +56,17 @@
             <textarea id="bioField"></textarea>
           </div>
           <div class="uploaded__container">
-            <label for="upload__file" class="upload__file">Choisir un fichier </label>
-            <input type="file" id="upload__file" name="upload__file" class="upload__file"
+            <label for="uploaderFile" class="upload__file">Choisir un fichier </label>
+            <input type="file" id="uploaderFile" name="upload__file" class="upload__file"
               accept=".jpg, .jpeg, .png, .webp">
-            <div class="contact__image__container"><img id="uploadedImage">
+            <div class="contact__image__container">
+              <img id="uploadedImage">
             </div>
           </div>
           <!-- Submit and Reset button -->
           <div>
             <input type="submit" id="submitButton" value="Créer">
-            <input type="reset" id="resetButton" value="Réinitialiser">
+            <input type="reset" id="resetButton" value="Réinit.">
           </div>
         </form>
       </section>
@@ -78,6 +79,8 @@
     </main>
   </div>
   <script src="script.js"></script>
+
+
 </body>
 
 </html>
