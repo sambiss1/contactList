@@ -30,12 +30,12 @@
           <!-- Prénom -->
           <div>
             <label>Prénom <span>*</span></label>
-            <br><input type="text" name="prenom" id="firstNameField">
+            <br><input type="text" name="prenom" id="firstNameField" required>
           </div>
           <!-- Nom -->
           <div>
             <label>Nom <span>*</span></label>
-            <br><input type="text" name="nom" id="lastNameField">
+            <br><input type="text" name="nom" id="lastNameField" required>
           </div>
           <!-- Groupe-->
           <div>
@@ -53,12 +53,12 @@
           <div>
             <label>Bio <span>*</span></label>
             <br>
-            <textarea id="bioField"></textarea>
+            <textarea id="bioField" required></textarea>
           </div>
           <div class="uploaded__container">
             <label for="uploaderFile" class="upload__file">Choisir un fichier </label>
             <input type="file" id="uploaderFile" name="upload__file" class="upload__file"
-              accept=".jpg, .jpeg, .png, .webp">
+              accept=".jpg, .jpeg, .png, .webp" required>
             <div class="contact__image__container">
               <img id="uploadedImage">
             </div>
