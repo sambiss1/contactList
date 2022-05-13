@@ -82,6 +82,7 @@ form.addEventListener("submit", submitInformation = (event) => {
 
   // Create contact image
   const iconContainer = document.createElement("span");
+  iconContainer.classList.add('iconContainer');
   const iconDelete = document.createElement("i");
   iconDelete.classList.add("las", "la-times");
 
@@ -127,7 +128,9 @@ form.addEventListener("submit", submitInformation = (event) => {
       // Change isModified value to true
       isModified = true;
       selectedContacts = contactDetailsId;
-
+      if (event.target.classList.contains("la-times") || event.target.classList.contains("iconContainer")) {
+        return;
+      }
 
       // Change submitButton value to "Modifier"
       submitButton.value = "Modifier";
